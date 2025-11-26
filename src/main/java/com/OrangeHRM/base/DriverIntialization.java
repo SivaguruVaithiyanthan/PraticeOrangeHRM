@@ -45,4 +45,9 @@ public class DriverIntialization
 	{
 		return driver;
 	}
+	
+	public void SetDriver(WebDriver newDriver)
+	{
+		driver = newDriver;
+	}
 }
