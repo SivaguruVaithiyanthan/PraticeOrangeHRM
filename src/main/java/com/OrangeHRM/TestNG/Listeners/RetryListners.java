@@ -1,5 +1,20 @@
 package com.OrangeHRM.TestNG.Listeners;
 
-public class RetryListners {
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+public class RetryListners implements IRetryAnalyzer
+{
+
+	@Override
+	public boolean retry(ITestResult result) 
+	{
+		if(!result.isSuccess())
+		{
+			
+		}
+		return false;
+
+	}
 
 }
