@@ -26,7 +26,7 @@ public class Report
 		test.info("Test Started for the TestCase : " + testCaseName);
 	}
 	
-	public void stioReporting()
+	public void stopReporting()
 	{
 		report.flush();
 	}

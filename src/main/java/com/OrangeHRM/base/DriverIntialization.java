@@ -41,7 +41,7 @@ public class DriverIntialization
 		driver.quit();
 	}
 	
-	public WebDriver setdriver() 
+	public WebDriver Getdriver() 
 	{
 		return driver;
 	}
