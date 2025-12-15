@@ -21,5 +21,4 @@ public class DBUtilities {
 			result = connection.createStatement().executeQuery(Query);		
 			return result;			
 		}
-
 }

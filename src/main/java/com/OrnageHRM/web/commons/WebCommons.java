@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.OrangeHRM.base.DriverIntialization;
 import com.OrangeHRM.framework.Utilities.PropertiesUtilities;
@@ -20,8 +21,8 @@ public class WebCommons extends DriverIntialization
 	public WebDriver driver = new DriverIntialization().Getdriver();
 	public Properties properties = PropertiesUtilities.readData("config.properties");
 	
-	public void navigateToURL() {
-		driver.get(properties.getProperty("ApplicationURL"));
+	public void navigateToURL(String URL) {
+		driver.get(properties.getProperty(URL));
 	}
 	
 	
@@ -34,8 +35,9 @@ public class WebCommons extends DriverIntialization
 	}
 	
 	
-	public void MoveToTheElement() {
-		
+	public void MoveToTheElement(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
 	}
 	
 	public void ScrollToTheElement(WebElement element) {
