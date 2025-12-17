@@ -3,6 +3,7 @@ package com.OrnageHRM.web.commons;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import com.OrangeHRM.Reports.Report;
 import com.OrangeHRM.base.DriverIntialization;
 import com.OrangeHRM.framework.Utilities.PropertiesUtilities;
 
@@ -43,6 +45,34 @@ public class WebCommons extends DriverIntialization
 	public void ScrollToTheElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("argument[0].scrollIntoView()", element);
+	}
+	
+	public Set<String> windowHandles()
+	{
+		return driver.getWindowHandles();
+	}
+	
+	public void switchToCurrentWindow(String WindowID)
+	{
+		driver.switchTo().window(WindowID);
+	}
+	
+	public void switchFrame(WebElement element)
+	{
+		driver.switchTo().frame(element);
+	}
+	
+	public void switchToDefaultFrame()
+	{
+		driver.switchTo().defaultContent();
+	}
+	
+	public void logMessage(String Status , String message)
+	{
+		if(Status.equalsIgnoreCase("pass")) { Report.test.pass(message); }
+		else if(Status.equalsIgnoreCase("fail")) { Report.test.fail(message); }
+		else if(Status.equalsIgnoreCase("info")) { Report.test.info(message); }
+		else if(Status.equalsIgnoreCase("warning")) { Report.test.warning(message); }
 	}
 	
 	public static String CaptureScreenShot(WebDriver driver , String nameOfTheImage) throws IOException{
