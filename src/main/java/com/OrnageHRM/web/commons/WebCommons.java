@@ -20,11 +20,11 @@ import com.OrangeHRM.framework.Utilities.PropertiesUtilities;
 
 public class WebCommons extends DriverIntialization
 {
-	public WebDriver driver = new DriverIntialization().Getdriver();
+	public static WebDriver driver = new DriverIntialization().Getdriver();
 	public Properties properties = PropertiesUtilities.readData("config.properties");
 	
-	public void navigateToURL(String URL) {
-		driver.get(properties.getProperty(URL));
+	public void navigateToURL() {
+		driver.get(properties.getProperty("ApplicationURL"));
 	}
 	
 	
@@ -88,6 +88,15 @@ public class WebCommons extends DriverIntialization
 		
 		FileUtils.copyFile(captureScreenshot, Destination);
 		return locationtoStore;		
+	}
+	
+	public boolean isElementDisplayed(WebElement elment)
+	{
+		if(elment.isDisplayed())
+		{
+			return true;
+		}
+	   return false;
 	}
 		
 }
