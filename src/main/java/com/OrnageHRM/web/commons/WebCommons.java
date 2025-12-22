@@ -2,6 +2,7 @@ package com.OrnageHRM.web.commons;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.Set;
 
@@ -13,6 +14,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.OrangeHRM.Reports.Report;
 import com.OrangeHRM.base.DriverIntialization;
@@ -65,6 +68,11 @@ public class WebCommons extends DriverIntialization
 	public void switchToDefaultFrame()
 	{
 		driver.switchTo().defaultContent();
+	}
+	
+	public void elementWait(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
 	public void logMessage(String Status , String message)
