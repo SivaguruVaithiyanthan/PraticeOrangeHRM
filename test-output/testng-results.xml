@@ -1,65 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-26T17:26:24 IST" name="Default suite" finished-at="2025-11-26T17:26:24 IST" duration-ms="63">
+  <suite started-at="2025-12-26T17:31:35 IST" name="Default suite" finished-at="2025-12-26T17:31:35 IST" duration-ms="103">
     <groups>
     </groups>
-    <test started-at="2025-11-26T17:26:24 IST" name="Default test" finished-at="2025-11-26T17:26:24 IST" duration-ms="63">
-      <class name="com.pratice.TestNG.Class.PraticeClassOne">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="beforeTest" finished-at="2025-11-26T17:26:24 IST" duration-ms="11" status="PASS">
+    <test started-at="2025-12-26T17:31:35 IST" name="Default test" finished-at="2025-12-26T17:31:35 IST" duration-ms="103">
+      <class name="com.OrangeHRM.test.LoginPageTest">
+        <test-method is-config="true" signature="setUpBrowser(java.lang.String)[pri:0, instance:com.OrangeHRM.test.LoginPageTest@651aed93]" started-at="2025-12-26T17:31:35 IST" name="setUpBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1766750495820" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setUpBrowser.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setUpBrowser.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="beforeClass" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- setUpBrowser -->
+        <test-method signature="VerifyLoginPage()[pri:0, instance:com.OrangeHRM.test.LoginPageTest@651aed93]" started-at="2025-12-26T17:31:35 IST" name="VerifyLoginPage" finished-at="2025-12-26T17:31:35 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setUpBrowser.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @BeforeMethod annotated setUpBrowser.
+For more information on native dependency injection please refer to https://testng.org/#_dependency_injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:442)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:347)
+at org.testng.internal.Parameters.createParameters(Parameters.java:699)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="beforeMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- VerifyLoginPage -->
+        <test-method is-config="true" signature="CloseDriver()[pri:0, instance:com.OrangeHRM.test.LoginPageTest@651aed93]" started-at="2025-12-26T17:31:35 IST" name="CloseDriver" finished-at="2025-12-26T17:31:35 IST" duration-ms="6" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "com.OrangeHRM.base.DriverIntialization.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "com.OrangeHRM.base.DriverIntialization.driver" is null
+at com.OrangeHRM.base.DriverIntialization.CloseDriver(DriverIntialization.java:41)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:623)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="TestOne()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="TestOne" finished-at="2025-11-26T17:26:24 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestOne -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="afterMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="beforeMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="TestThree()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="TestThree" finished-at="2025-11-26T17:26:24 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestThree -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="afterMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="beforeMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="TestTwo()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="TestTwo" finished-at="2025-11-26T17:26:24 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestTwo -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="afterMethod" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="afterClass" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.pratice.TestNG.Class.PraticeClassOne@bccb269]" started-at="2025-11-26T17:26:24 IST" name="afterTest" finished-at="2025-11-26T17:26:24 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.pratice.TestNG.Class.PraticeClassOne -->
+        </test-method> <!-- CloseDriver -->
+      </class> <!-- com.OrangeHRM.test.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

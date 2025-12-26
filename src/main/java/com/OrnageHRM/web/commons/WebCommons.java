@@ -70,8 +70,13 @@ public class WebCommons extends DriverIntialization
 		driver.switchTo().defaultContent();
 	}
 	
-	public void elementWait(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	public void elementWait(WebElement element , int seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void elementDisappeared(WebElement element , int seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
@@ -96,6 +101,27 @@ public class WebCommons extends DriverIntialization
 		
 		FileUtils.copyFile(captureScreenshot, Destination);
 		return locationtoStore;		
+	}
+	
+	public static String CaptureParticularElement(WebElement Element , String ScreenshotName) throws IOException
+	{
+		String location = System.getProperty("user.dir") + "\\ScreenShot\\" + ScreenshotName +".png";
+		File captureScreenShot = Element.getScreenshotAs(OutputType.FILE);
+        File Destination = new File(location);
+		
+		if(captureScreenShot.exists())
+		{
+			captureScreenShot.delete();
+		}
+		
+		FileUtils.copyFile(captureScreenShot, Destination);
+		return location;
+	}
+	
+	public void addScreenShort(String screenShortName) throws IOException
+	{
+		Report.test.addScreenCaptureFromPath(CaptureScreenShot(driver, screenShortName));
+		Report.test.info("Screen Shot Attached Successfully for : " + screenShortName);
 	}
 	
 	public boolean isElementDisplayed(WebElement elment)
