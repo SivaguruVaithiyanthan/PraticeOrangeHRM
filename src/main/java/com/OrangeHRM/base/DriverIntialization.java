@@ -6,13 +6,16 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class DriverIntialization 
 {
 	private static WebDriver driver = null;
-	
+		
+	@Parameters("BrowserName")
 	@BeforeMethod(alwaysRun = true)
-	public static void setUpBrowser(String BrowserName)
+	public static void setUpBrowser(@Optional("Chrome") String BrowserName)
 	{
 		if(BrowserName.equalsIgnoreCase("Chrome"))
 		{
