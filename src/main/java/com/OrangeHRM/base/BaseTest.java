@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import com.OrangeHRM.Reports.Report;
 
-public class BaseTest 
+public class BaseTest extends DriverIntialization
 {
 	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite()

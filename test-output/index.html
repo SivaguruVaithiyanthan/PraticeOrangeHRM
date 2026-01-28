@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Login_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Login Suite</span>
+              <span class="suite-name border-failed">Login Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Login_Suite" class="hide-methods skipped suite-Login_Suite"> (hide)</a> <!-- hide-methods skipped suite-Login_Suite -->
-                      <a href="#" panel-name="suite-Login_Suite" class="show-methods skipped suite-Login_Suite"> (show)</a> <!-- show-methods skipped suite-Login_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Login_Suite" class="hide-methods failed suite-Login_Suite"> (hide)</a> <!-- hide-methods failed suite-Login_Suite -->
+                      <a href="#" panel-name="suite-Login_Suite" class="show-methods failed suite-Login_Suite"> (show)</a> <!-- show-methods failed suite-Login_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Login_Suite">
+                    <div class="method-list-content failed suite-Login_Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Login_Suite" title="com.OrangeHRM.test.LoginPageTest" class="method navigator-link" hash-for-method="VerifyLoginPage">VerifyLoginPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Login_Suite -->
+                    </div> <!-- method-list-content failed suite-Login_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Login_Suite" class="panel Login_Suite">
-          <div class="suite-Login_Suite-class-skipped">
+          <div class="suite-Login_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.OrangeHRM.test.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,16 +129,22 @@
                   <a name="VerifyLoginPage">
                   </a> <!-- VerifyLoginPage -->
                   <span class="method-name">VerifyLoginPage</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentReports.createTest(String)&quot; because &quot;com.OrangeHRM.Reports.Report.report&quot; is null
-	at com.OrangeHRM.Reports.Report.startReporting(Report.java:25)
-	at com.OrangeHRM.test.LoginPageTest.createReport(LoginPageTest.java:19)
+                  <div class="stack-trace">java.io.FileNotFoundException: Source &apos;C:\Users\DEVELO~1\AppData\Local\Temp\screenshot11675794685759697572.png&apos; does not exist
+	at org.apache.commons.io.FileUtils.checkFileExists(FileUtils.java:301)
+	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:850)
+	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:886)
+	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:785)
+	at com.OrnageHRM.web.commons.WebCommons.CaptureScreenShot(WebCommons.java:104)
+	at com.OrnageHRM.web.commons.WebCommons.addScreenShort(WebCommons.java:125)
+	at com.OrangeHRM.Steps.LoginPageSteps.CaptureLoginPage(LoginPageSteps.java:22)
+	at com.OrangeHRM.test.LoginPageTest.VerifyLoginPage(LoginPageTest.java:17)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 29 stack frames
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Login_Suite-class-skipped -->
+          </div> <!-- suite-Login_Suite-class-failed -->
         </div> <!-- panel Login_Suite -->
         <div panel-name="test-xml-Login_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -195,12 +201,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLoginPage')
 data.setCell(0, 2, 'com.OrangeHRM.test.LoginPageTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 11360);
 window.suiteTableData['Login_Suite']= { tableData: data, tableDiv: 'times-div-Login_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Login_Suite">
               </div> <!-- times-div-Login_Suite -->
             </div> <!-- times-div -->
@@ -227,20 +233,32 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.OrangeHRM.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpBrowser(Chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">203 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.OrangeHRM.test.LoginPageTest.VerifyLoginPage() throws java.io.IOException)</span>
+                <span class="method-start">1792 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">createReport(public void com.OrangeHRM.test.LoginPageTest.VerifyLoginPage() throws java.io.IOException)</span>
-                <span class="method-start">3034 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-name">VerifyLoginPage</span>
+                <span class="method-start">1803 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">CloseDriver</span>
-                <span class="method-start">3063 ms</span>
+                <span class="method-start">13171 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">13520 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

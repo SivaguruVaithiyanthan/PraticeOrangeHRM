@@ -6,8 +6,10 @@
       <class name="com.OrangeHRM.test.LoginPageTest">
         <methods>
           <include name="VerifyLoginPage"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
           <include name="setUpBrowser"/>
-          <include name="createReport"/>
+          <include name="beforeMethod"/>
           <include name="CloseDriver"/>
         </methods>
       </class> <!-- com.OrangeHRM.test.LoginPageTest -->
