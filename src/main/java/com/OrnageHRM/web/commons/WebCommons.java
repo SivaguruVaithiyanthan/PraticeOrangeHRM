@@ -22,14 +22,17 @@ import com.OrangeHRM.base.DriverIntialization;
 import com.OrangeHRM.framework.Utilities.PropertiesUtilities;
 
 public class WebCommons extends DriverIntialization
-{
-	public static WebDriver driver = new DriverIntialization().Getdriver();
+{;
 	public Properties properties = PropertiesUtilities.readData("config.properties");
 	
-	public void navigateToURL() {
+	public void navigateToApplicationURL() {
 		driver.get(properties.getProperty("ApplicationURL"));
 	}
 	
+	public void navigateToPageURL(String URL)	
+	{
+		driver.navigate().to(URL);
+	}
 	
 	public void elementClickByXpath(String Values) {
 		driver.findElement(By.xpath(Values)).click();
@@ -38,7 +41,6 @@ public class WebCommons extends DriverIntialization
 	public void elementClickByIdh(String Values) {
 		driver.findElement(By.id(Values)).click();
 	}
-	
 	
 	public void MoveToTheElement(WebElement element) {
 		Actions action = new Actions(driver);

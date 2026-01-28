@@ -6,7 +6,6 @@
       <class name="com.OrangeHRM.test.LoginPageTest">
         <methods>
           <include name="VerifyLoginPage"/>
-          <include name="SetBrowser"/>
           <include name="setUpBrowser"/>
           <include name="CloseDriver"/>
         </methods>
