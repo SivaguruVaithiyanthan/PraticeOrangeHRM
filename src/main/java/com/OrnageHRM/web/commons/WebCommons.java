@@ -22,7 +22,7 @@ import com.OrangeHRM.base.DriverIntialization;
 import com.OrangeHRM.framework.Utilities.PropertiesUtilities;
 
 public class WebCommons extends DriverIntialization
-{;
+{
 	public Properties properties = PropertiesUtilities.readData("config.properties");
 	
 	public void navigateToApplicationURL() {
@@ -96,9 +96,9 @@ public class WebCommons extends DriverIntialization
 		File captureScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File Destination = new File(locationtoStore);
 		
-		if(captureScreenshot.exists())
+		if(Destination.exists())
 		{
-			captureScreenshot.delete();
+			Destination.delete();
 		}
 		
 		FileUtils.copyFile(captureScreenshot, Destination);
@@ -107,7 +107,7 @@ public class WebCommons extends DriverIntialization
 	
 	public static String CaptureParticularElement(WebElement Element , String ScreenshotName) throws IOException
 	{
-		String location = System.getProperty("user.dir") + "\\ScreenShot\\" + ScreenshotName +".png";
+		String location = System.getProperty("user.dir") + "/ScreenShot/" + ScreenshotName +".png";
 		File captureScreenShot = Element.getScreenshotAs(OutputType.FILE);
         File Destination = new File(location);
 		

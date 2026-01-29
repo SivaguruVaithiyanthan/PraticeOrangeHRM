@@ -11,7 +11,14 @@ public class RetryListners implements IRetryAnalyzer
 	{
 		if(!result.isSuccess())
 		{
-			
+			int retryCount = 0;
+			int maxCount = 2;
+			if(retryCount < maxCount)
+			{
+				retryCount++;
+				return true;
+			}
+			return false;
 		}
 		return false;
 
