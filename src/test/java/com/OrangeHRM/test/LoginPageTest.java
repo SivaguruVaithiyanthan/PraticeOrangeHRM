@@ -14,6 +14,12 @@ public class LoginPageTest extends BaseTest {
 
 	@Test
 	public void VerifyLoginPage() throws IOException {
-		login.loginpageSteps();
+		login.loginpageSteps();		
+	}
+	
+	@Test(dependsOnMethods = "VerifyLoginPage")
+	public void verifyLoginPageElements()
+	{
+		login.elementsVerfication();
 	}
 }
