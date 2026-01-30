@@ -17,6 +17,8 @@ public class LoginPageSteps extends WebCommons
 	{
 		LoginPageElements loginElements = new LoginPageElements(new DriverIntialization().Getdriver());
 		
+		elementWait(loginElements.UserName,5);
+		
 		isElementDisplayed(loginElements.UserName);
 		isElementDisplayed(loginElements.Password);
 		isElementDisplayed(loginElements.loginButon);

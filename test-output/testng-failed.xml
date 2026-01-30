@@ -9,7 +9,7 @@
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="setUpBrowser"/>
-          <include name="beforeMethod"/>
+          <include name="verifyLoginPageElements"/>
           <include name="CloseDriver"/>
         </methods>
       </class> <!-- com.OrangeHRM.test.LoginPageTest -->

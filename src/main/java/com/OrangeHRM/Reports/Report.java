@@ -12,7 +12,7 @@ public class Report
 	
 	public static void reportSetup()
 	{
-		location = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\" + "AutomationRepot.html");
+		location = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\" + "6");
 		report = new ExtentReports();
 		report.attachReporter(location);
 	}

@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Login_Suite" title="com.OrangeHRM.test.LoginPageTest" class="method navigator-link" hash-for-method="VerifyLoginPage">VerifyLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Login_Suite" title="com.OrangeHRM.test.LoginPageTest" class="method navigator-link" hash-for-method="verifyLoginPageElements">verifyLoginPageElements</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Login_Suite -->
@@ -129,6 +134,13 @@
                   <a name="VerifyLoginPage">
                   </a> <!-- VerifyLoginPage -->
                   <span class="method-name">VerifyLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginPageElements">
+                  </a> <!-- verifyLoginPageElements -->
+                  <span class="method-name">verifyLoginPageElements</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,11 +197,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLoginPage')
 data.setCell(0, 2, 'com.OrangeHRM.test.LoginPageTest')
-data.setCell(0, 3, 7998);
+data.setCell(0, 3, 6263);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyLoginPageElements')
+data.setCell(1, 2, 'com.OrangeHRM.test.LoginPageTest')
+data.setCell(1, 3, 1232);
 window.suiteTableData['Login_Suite']= { tableData: data, tableDiv: 'times-div-Login_Suite'}
 return data;
 }
@@ -225,21 +241,25 @@ return data;
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="configuration-method before">
+              <div class="configuration-class before">
                 <span class="method-name">setUpBrowser(Chrome)</span>
-                <span class="method-start">200 ms</span>
-              </div> <!-- configuration-method before -->
+                <span class="method-start">184 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginPage</span>
-                <span class="method-start">2596 ms</span>
+                <span class="method-start">1766 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
+              <div class="test-method">
+                <span class="method-name">verifyLoginPageElements</span>
+                <span class="method-start">8037 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
                 <span class="method-name">CloseDriver</span>
-                <span class="method-start">10598 ms</span>
-              </div> <!-- configuration-method after -->
+                <span class="method-start">9271 ms</span>
+              </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">10885 ms</span>
+                <span class="method-start">9534 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
