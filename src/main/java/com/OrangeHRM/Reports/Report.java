@@ -10,9 +10,9 @@ public class Report
 	public static ExtentReports report = null;
 	public static ExtentTest test = null;
 	
-	public static void reportSetup()
+	public static void reportSetup(Class<?> className)
 	{
-		location = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\" + "6");
+		location = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\" + className + ".html");
 		report = new ExtentReports();
 		report.attachReporter(location);
 	}

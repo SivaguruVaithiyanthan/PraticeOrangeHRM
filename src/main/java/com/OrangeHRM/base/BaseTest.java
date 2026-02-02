@@ -10,7 +10,7 @@ public class BaseTest extends DriverIntialization
 	@BeforeSuite(alwaysRun = true)
 	public void beforeSuite()
 	{
-		Report.reportSetup();
+		Report.reportSetup(this.getClass());
 	}
 	
 	@AfterSuite(alwaysRun = true)
