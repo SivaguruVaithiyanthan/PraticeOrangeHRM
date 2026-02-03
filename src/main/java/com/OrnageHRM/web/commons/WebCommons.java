@@ -57,6 +57,11 @@ public class WebCommons extends DriverIntialization
 		return driver.getWindowHandles();
 	}
 	
+	public int totalWindow()
+	{
+		return driver.getWindowHandles().size();
+	}
+	
 	public void switchToCurrentWindow(String WindowID)
 	{
 		driver.switchTo().window(WindowID);
@@ -133,6 +138,24 @@ public class WebCommons extends DriverIntialization
 			return true;
 		}
 	   return false;
+	}
+	
+	public void browserIsOpened(WebDriver driver)
+	{
+		@SuppressWarnings("unused")
+		boolean alreadyOpened = false;
+		try
+		{
+			if(driver != null && totalWindow() > 0)
+			{
+				alreadyOpened = true;		
+		    }  
+	    }
+		catch(Exception ex)
+		{
+			alreadyOpened = false;
+		}
+		
 	}
 		
 }
